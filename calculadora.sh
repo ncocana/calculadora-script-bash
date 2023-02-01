@@ -14,6 +14,7 @@ while [[ $choice != "9" ]]; do
     echo -e "9. Salir.\n"
     read -r -p "Elige una opción: " choice
 
+    # If 'choice' equals '9', go out of while.
     if [[ $choice != "9" ]]; then
         echo ""
         read -r -p "Introduce un numero: " number1
