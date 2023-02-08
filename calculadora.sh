@@ -16,10 +16,12 @@ while [[ $choice != "9" ]]; do
     echo -e "9. Salir.\n"
     read -r -p "Elige una opción: " choice
 
-    # If 'choice' equals '9' or no option was chosen, go out of the while loop.
+    # If 'choice' equals '6', ask only one number.
     if [[ $choice == "6" ]]; then
         echo ""
         read -r -p "Introduce un numero: " number1
+    # If 'choice' equals '9' or no option was chosen, go out of the while loop.
+    # Otherwise, ask for two numbers.
     elif [[ $choice != "9" && $choice != "" ]]; then
         echo ""
         read -r -p "Introduce un numero: " number1
