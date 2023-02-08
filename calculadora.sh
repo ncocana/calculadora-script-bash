@@ -11,11 +11,16 @@ while [[ $choice != "9" ]]; do
     echo "2. Restar."
     echo "3. Multiplicar."
     echo "4. Dividir."
+    echo "5. Exponenciación."
+    echo "6. Raiz cuadrada."
     echo -e "9. Salir.\n"
     read -r -p "Elige una opción: " choice
 
-    # If 'choice' equals '9', go out of while.
-    if [[ $choice != "9" && $choice != "" ]]; then
+    # If 'choice' equals '9' or no option was chosen, go out of the while loop.
+    if [[ $choice == "6" ]]; then
+        echo ""
+        read -r -p "Introduce un numero: " number1
+    elif [[ $choice != "9" && $choice != "" ]]; then
         echo ""
         read -r -p "Introduce un numero: " number1
         read -r -p "Introduce otro numero: " number2
@@ -38,6 +43,13 @@ while [[ $choice != "9" ]]; do
         echo "$number1 / $number2 = $result"
         echo "El resultado es: $result"
         echo "El resto es: $(bc <<< "($number1) % ($number2)")"
+        ;;
+        5)result=$(($number1 ** $number2))
+        echo "$number1 ** $number2 = $result"
+        echo "$number1 elevado a $number2 es: $result"
+        ;;
+        6)result=$(bc <<< "scale=2; sqrt($number1)")
+        echo "La raíz cuadrada de $number1 es: $result"
         ;;
         9)break
         ;;
