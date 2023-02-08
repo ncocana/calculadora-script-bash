@@ -15,29 +15,29 @@ while [[ $choice != "9" ]]; do
     read -r -p "Elige una opción: " choice
 
     # If 'choice' equals '9', go out of while.
-    if [[ $choice != "9" ]]; then
+    if [[ $choice != "9" && $choice != "" ]]; then
         echo ""
         read -r -p "Introduce un numero: " number1
         read -r -p "Introduce otro numero: " number2
     fi
     echo ""
     case $choice in
-        1)result=$(($number1 + $number2))
+        1)result=$(bc <<< "($number1) + ($number2)")
         echo "$number1 + $number2 = $result"
         echo "El resultado es: $result"
         ;;
-        2)result=$(($number1 - $number2))
+        2)result=$(bc <<< "($number1) - ($number2)")
         echo "$number1 - $number2 = $result"
         echo "El resultado es: $result"
         ;;
-        3)result=$(($number1 * $number2))
+        3)result=$(bc <<< "($number1) * ($number2)")
         echo "$number1 * $number2 = $result"
         echo "El resultado es: $result"
         ;;
-        4)result=$(($number1 / $number2))
+        4)result=$(bc <<< "($number1) / ($number2)")
         echo "$number1 / $number2 = $result"
         echo "El resultado es: $result"
-        echo "El resto es: $(($number1 % $number2))"
+        echo "El resto es: $(bc <<< "($number1) % ($number2)")"
         ;;
         9)break
         ;;
