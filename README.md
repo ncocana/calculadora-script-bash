@@ -18,7 +18,7 @@ chmod 764 ./calculadora.sh
 
 Now you can execute the program with:   
 ```
-./calculator.sh
+./calculadora.sh
 ```
 
 You will be presented with a menu with options to choose from. Which will be:   
@@ -35,4 +35,4 @@ You will be presented with a menu with options to choose from. Which will be:
 
 You will be asked to select an option and then introduce one or two numbers depending on the operation you wish to do.   
 
-Once done the operation, the menu will appear again before you. To exit the programm, you just have to select the last option: ```9. Salir```.
+Once done the operation, the menu will appear again before you. To exit the program, you just have to select the last option: ```9. Salir```.
