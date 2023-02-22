@@ -60,12 +60,12 @@ while [[ $choice != "9" ]]; do
         	6)result=$(bc <<< "scale=2; sqrt($number1)")
         	echo "La raíz cuadrada de $number1 es: $result"
         	;;
-		7)result=$(echo "l($number1)/l($number2)" | bc -l)
-		echo "El logaritmo de $number1 en base $number2 es: $result"
-		;;
-        9)break
-        ;;
-    	esac
+			7)result=$(echo "l($number1)/l($number2)" | bc -l)
+			echo "El logaritmo de $number1 en base $number2 es: $result"
+			;;
+			9)break
+			;;
+			esac
 	else 
 	    echo "Introduce un numero válido, por favor."
 	    continue
